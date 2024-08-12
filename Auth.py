@@ -7,7 +7,6 @@ from urllib import parse
 from fyers_apiv3 import fyersModel
 from urllib.parse import parse_qs, urlparse
 from cred import *
-# from neo_api_client import NeoAPI
 
 class FyersAuth:
     SECRET_KEY = SECRET_KEY
@@ -213,49 +212,3 @@ class FyersAuth:
 
             access_token = response["access_token"]
         return access_token
-
-# class Neo:
-#     def __init__(self):
-#         self.client = None
-#         self.log = self.login()
-        
-#     def login(self):
-#         client = NeoAPI(consumer_key=CON, consumer_secret=SECRET, environment='prod', access_token=None, neo_fin_key=None)
-#         log = client.login(mobilenumber=MOB, password=Pass)
-#         ses = client.session_2fa(OTP=MPIN)
-#         greeting_name = ses['data'].get('greetingName', 'User')
-#         welcome_message = f'Welcome {greeting_name}'
-#         print(welcome_message)
-#         self.client = client  # Initialize self.client after 2FA is completed
-#         return client
-
-#     def symb(self, symbol):
-#         if symbol.startswith('NSE:'):
-#             return symbol[4:]
-#         return symbol
-
-#     def place_order(self, CEPE, SB):
-#         order = self.client.place_order(
-#             exchange_segment='nse_fo',
-#             product='MIS',
-#             price='',
-#             order_type='MKT',
-#             quantity='30',
-#             validity='DAY',
-#             trading_symbol=CEPE,
-#             transaction_type=SB,
-#             amo="NO",
-#             disclosed_quantity="0",
-#             market_protection="0",
-#             pf="N",
-#             trigger_price="0"
-#         )
-#         orderno = order['nOrdNo']
-#         order_report = self.client.order_report()
-#         order_details = next((order for order in order_report['data'] if order['nOrdNo'] == orderno), None)
-#         if order_details['ordSt'] == 'complete':
-#             trade_report = self.client.trade_report(orderno)
-#             selected_details = {key: trade_report['data'][key] for key in ['exTm', 'stkPrc', 'optTp', 'trnsTp', 'avgPrc']}
-#             print(selected_details)
-#         elif order_details['ordSt'] == 'rejected':
-#             print(order_details['rejRsn'])
