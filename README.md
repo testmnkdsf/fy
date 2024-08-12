@@ -1,13 +1,7 @@
 
 from fyers_utils import get_access_token, initialize_fyers
-
-# Fetch the access token
 access_token = get_access_token()
-
-# Initialize the Fyers API client
 fyers = initialize_fyers(access_token)
-
-# fetch history
 data = {
     "symbol": "NSE:SBIN-EQ",
     "resolution": "5",
@@ -18,4 +12,4 @@ data = {
     
 historical_data = fyers.history(data)
 
-use normally like the rest
+# use normally like the original fyers api
