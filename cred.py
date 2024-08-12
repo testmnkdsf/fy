@@ -1,16 +1,22 @@
-CON = "ckdf2_VBTGuRocpgWZqAUGtBTcEa"
-SECRET = "WOyapUK5dCinAB9QUMsvPshkL5ka"
-MOB='+918800256492'
-Pass='Jpfozhe@321'
-MPIN='880025'
+
+SECRET_KEY = ""
+FY_ID = ""
+APP_ID_TYPE = ""
+TOTP_KEY = ""
+PIN = ""
+REDIRECT_URI = ""
+client_id = ""
+APP_ID = ''
+APP_TYPE = ''
 
 
-SECRET_KEY = "39NRQ5U189"
-FY_ID = "YK05527"
-APP_ID_TYPE = "2"
-TOTP_KEY = "FTDT3RZX5WWHBNIZPXZ2MZIA5J4HCLXE"
-PIN = "8800"
-REDIRECT_URI = "https://127.0.0.1:5000/"
-client_id = "BFOKWRWI9K-100"
-APP_ID = 'BFOKWRWI9K'
-APP_TYPE = '100'
+# ""example""
+# SECRET_KEY = ""
+# FY_ID = ""
+# APP_ID_TYPE = "2"
+# TOTP_KEY = ""
+# PIN = ""
+# REDIRECT_URI = ""
+# client_id = "*********-100"
+# APP_ID = '"*********-'
+# APP_TYPE = '100'
