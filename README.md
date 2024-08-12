@@ -7,7 +7,7 @@ access_token = get_access_token()
 # Initialize the Fyers API client
 fyers = initialize_fyers(access_token)
 
-#fetch history
+# fetch history
 data = {
     "symbol": "NSE:SBIN-EQ",
     "resolution": "5",
